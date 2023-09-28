@@ -49,8 +49,6 @@ export default function Upwork<P extends UpworkProfile>(
       url: "https://www.upwork.com/api/auth/v1/info.json",
     },
     profile(profile) {
-      console.warn('upwork profile: ', profile);
-
       return {
         id: profile.info.ref,
         name: profile.auth_user.first_name + " " + profile.auth_user.last_name,
